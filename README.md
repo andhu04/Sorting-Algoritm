@@ -83,6 +83,7 @@ def heapsort(arr):
     for i in range(n - 1, 0, -1):
         arr[i], arr[0] = arr[0], arr[i]
         heapify(arr, i, 0)
+    return arr
 ```
 This is the implementation of the Heap Sort algorithm, which uses a binary heap data structure to perform the sorting. It first converts the input list into a max-heap (a binary heap where the parent nodes are greater than or equal to their children). Then, it repeatedly extracts the maximum element (the root of the heap) and rebuilds the heap until the list is sorted in ascending order.
 
@@ -98,6 +99,7 @@ def bubble_sort(arr):
                 swapped = True
         if not swapped:
             break
+    return arr
 ```
 This is the implementation of the Bubble Sort algorithm, a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The process continues until the list is sorted.
 
@@ -111,6 +113,7 @@ def selection_sort(arr):
             if arr[j] < arr[min_idx]:
                 min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
+    return arr
 ```
 This is the implementation of the Selection Sort algorithm, which repeatedly selects the minimum element from the unsorted part of the list and places it at the beginning. The sorted portion of the list grows from left to right.
 
@@ -124,6 +127,7 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j + 1] = key
+    return arr
 ```
 This is the implementation of the Insertion Sort algorithm, which builds a sorted portion of the list from left to right. It takes each element and inserts it into its correct position in the already sorted part of the list.
 
